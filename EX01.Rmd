@@ -1,0 +1,53 @@
+---
+title: "My analysis"
+author: "Jian Li"
+date: "11/4/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+This exercise uses the North Pole Environmental Observatory Bottle Chemistry data, detailed at:
+
+https://arcticdata.io/catalog/view/doi:10.18739/A25T3FZ8X.
+
+Briefly, a snapshot of diverse measurements of seawater chemistry along with supporting conductivity, temperature, and depth (CTD) data from the Arctic Ocean near the North Pole were obtained for a 10-day period in March 2018.
+
+This exercise explored the relationship between these diverse measurements and the depth at which the measurements were taken.
+
+```{r, results='hide', echo=F}
+  d01 <- read.csv("BGchem2008data.csv")
+```
+
+# Analysis
+
+Linear regression models were used to investigate how depth affected seawater chemistry measurements. A p-value less than 0.05 is used for a statistical significant result.
+
+# Results
+
+List of chemistry measurements was given in Table 1.
+
+Sampling locations were spread in a region of ..., with their coordinates shown in Figure 1.
+
+```{r, echo=F}
+  par(mar=c(5,5,4,1))
+  plot(d01$Longitude, d01$Latitude, xlab="Longitude",
+       ylab="Latidue", 
+       main="Figure 1. Sampling locations")
+```
+
+```{r, echo=F}
+  t1 <- cor.test(d01$CTD_Depth, d01$CTD_Temperature)
+```
+
+Relationship between water temperatures and measurement depths was plotted in Figure 2. A significant correlation (`r format(t1$estimate, digits=3)`, p = `r format(t1$p.value, digits=3)`) between depth and temperature was detected. Thus, only depth was used in subsequently regression analysis.
+```{r, echo=F}
+  plot(d01$CTD_Depth, d01$CTD_Temperature,  
+       xlab="CTD depth (m)", ylab="Water temperature (C)", main="Figure 2. Relationship between CTD depth and water temperature")
+```
+
+Among 

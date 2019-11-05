@@ -24,11 +24,9 @@ Another link [DataOne](http://www.dataone.org)
 
 An ordered list:
 
-1. NOLA
-  * Terminal 1
-  * Terminal 2
-2. Santa Barbara
-3. Hawaii Honolulu and then Toronto
+- Data cleaning
+- [Analysis](EX01.html)
+- Discussion
 
 
 # Show an in-line R code
