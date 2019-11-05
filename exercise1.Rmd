@@ -1,0 +1,74 @@
+---
+title: "test"
+author: "Jian Li"
+date: "11/4/2019"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+  runtime: shiny
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Header 1
+Some **bold**
+
+My test link [NCEAS](http://www.nceas.ucsb.edu)
+
+# Create a list
+
+An ordered list:
+
+1. NOLA
+  * Terminal 1
+  * Terminal 2
+2. Santa Barbara
+
+# Show an in-line R code
+```{r}
+x <- 3
+y <- 3*x
+summary(cars)
+```
+My results show a value of `r format(y,digits=3)`
+
+# Find a sum of squares
+```{r}
+n <- 1:9
+SS <- sum(n*n)
+```
+
+# Another chunk
+The result is $\sum_{i=1}^N{i^2}=$ `r SS`
+
+```{r, echo=FALSE}
+numericInput("n", "How many cars?", 5)
+renderTable({head(cars, input$n)})
+```
+
+
+# Function syntax
+```{r, results='hide'}
+result_value <- function(v1=0, v2=0) {}
+weight_kg <- c(50, 45, 52)
+mean(weight_kg)
+```
+
+# Read a csv file
+
+Use `read.csv` to read in the data
+```{r}
+bg_chem <- read.csv("BGchem2008data.csv")
+mean(bg_chem$CTD_Depth)
+```
+
+```{r}
+plot(bg_chem$CTD_Depth, bg_chem$CTD_Temperature)
+```
+
+
