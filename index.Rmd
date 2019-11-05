@@ -46,6 +46,10 @@ SS <- sum(n*n)
 # Another chunk
 The result is $\sum_{i=1}^N{i^2}=$ `r SS`
 
+```{r graphics, fig.align='center', echo=FALSE}
+knitr::include_graphics("figure1.png")
+```
+
 
 # Function syntax
 ```{r, results='hide'}
