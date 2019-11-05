@@ -29,7 +29,7 @@ An ordered list:
   * Terminal 1
   * Terminal 2
 2. Santa Barbara
-3. Hawaii
+3. Hawaii and then Toronto
 
 # Show an in-line R code
 ```{r}
