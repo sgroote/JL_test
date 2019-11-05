@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Some **bold**
 
 My test link [NCEAS](http://www.nceas.ucsb.edu)
+Another link [DataOne](http://www.dataone.org)
 
 # Create a list
 
