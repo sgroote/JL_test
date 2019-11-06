@@ -50,7 +50,6 @@ The result is $\sum_{i=1}^N{i^2}=$ `r SS`
 knitr::include_graphics("figure1.png")
 ```
 
-
 # Function syntax
 ```{r, results='hide'}
 result_value <- function(v1=0, v2=0) {}
