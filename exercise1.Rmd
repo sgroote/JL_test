@@ -31,6 +31,14 @@ An ordered list:
 2. Santa Barbara
 3. Hawaii Honolulu and then Toronto
 
+# Busy airports
+
+An ordered list:
+1. Ohare
+2. Santa Barbara - highly doubt it
+3. Dallas
+
+
 
 # Show an in-line R code
 ```{r}
