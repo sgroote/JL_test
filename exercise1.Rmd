@@ -39,6 +39,14 @@ An ordered list:
 3. Dallas
 
 
+# Favorite Jelly Bean Flavours
+
+An ordered list:
+1. Black
+2. Red
+3. Pink
+
+
 
 # Show an in-line R code
 ```{r}
